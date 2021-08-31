@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
   )
 })
 app.post("/api/student", (req, res) => {
-  const { name } = req.body
+  let { name } = req.body
   name = name.trim
 
   rollbar.log("Meme Lord Added to Hall of Fame", {
