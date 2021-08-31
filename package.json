@@ -1,7 +1,6 @@
 {
   "name": "Monitoring-Demo",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,5 +8,14 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sact3rnlang3l/Monitoring-Demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sact3rnlang3l/Monitoring-Demo/issues"
+  },
+  "homepage": "https://github.com/Sact3rnlang3l/Monitoring-Demo#readme",
+  "description": ""
 }
