@@ -11,7 +11,7 @@ let rollbar = new Rollbar({
 const students = []
 const app = express()
 
-app.use(rollbar.errorHandler())
+
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "/server/index.html"))
@@ -29,6 +29,8 @@ app.post("/api/student", (req, res) => {
   })
   res.sendStatus(200).send(students)
 })
+
+app.use(rollbar.errorHandler())
 
 app.listen(4040, () => console.log("Loud and Clear on 4040"))
 
