@@ -8,11 +8,26 @@ let rollbar = new Rollbar({
   captureUnhandledRejections: true,
 })
 
+const students = []
 const app = express()
+
+app.use(rollbar.errorHandler())
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "/server/index.html"))
-  rollbar.info('html file server like a good steak entree at an upscale restraunt')
+  rollbar.info(
+    "html file served like a good steak entree at an upscale restraunt"
+  )
+})
+app.post("/api/student", (req, res) => {
+  const { name } = req.body
+  name = name.trim
+
+  rollbar.log("Meme Lord Added to Hall of Fame", {
+    author: "Aiden",
+    type: "manual entry",
+  })
+  res.sendStatus(200).send(students)
 })
 
 app.listen(4040, () => console.log("Loud and Clear on 4040"))
