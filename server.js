@@ -1,6 +1,6 @@
 const express = require("express")
-// const { ConsoleWriter } = require("istanbul-lib-report")
 const path = require("path")
+
 const app = express()
 
 app.get("/", (req, res) => {

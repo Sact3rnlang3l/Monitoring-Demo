@@ -17,5 +17,8 @@
     "url": "https://github.com/Sact3rnlang3l/Monitoring-Demo/issues"
   },
   "homepage": "https://github.com/Sact3rnlang3l/Monitoring-Demo#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
